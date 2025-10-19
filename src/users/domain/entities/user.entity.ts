@@ -19,8 +19,8 @@ export class UserEntity extends Entity<UserProps> {
     this.props.name = value;
   }
 
-  updatePassword(password: string) {
-    this.props.password = password;
+  updatePassword(value: string) {
+    this.props.password = value;
   }
 
   get name(): string {
