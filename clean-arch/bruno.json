@@ -1,0 +1,6 @@
+{
+  "version": "1",
+  "name": "clean-arch",
+  "type": "collection",
+  "ignore": ["node_modules", ".git"]
+}
