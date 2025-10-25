@@ -150,4 +150,28 @@ describe('UserValidator unit test', () => {
       ]);
     });
   });
+
+  describe('CreatedAt field', () => {
+    it('should return invalidation cases for CreatedAt field', () => {
+      let isValid = sut.validate({
+        ...UserDataBuilder({
+          createdAt: 10 as any,
+        }),
+      });
+
+      expect(sut.errors!['createdAt']).toStrictEqual([
+        'createdAt must be a Date instance',
+      ]);
+
+      isValid = sut.validate({
+        ...UserDataBuilder({
+          createdAt: '2025' as any,
+        }),
+      });
+      expect(isValid).toBeFalsy();
+      expect(sut.errors!['createdAt']).toStrictEqual([
+        'createdAt must be a Date instance',
+      ]);
+    });
+  });
 });
