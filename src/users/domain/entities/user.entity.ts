@@ -1,4 +1,4 @@
-import { EntityValidationError } from 'src/shared/domain/errors/validation-error';
+import { EntityValidationError } from '../../../shared/domain/errors/validation-error';
 import { Entity } from '../../../shared/domain/entity';
 import { UserValidatorFactory } from '../validators/user.validator';
 
