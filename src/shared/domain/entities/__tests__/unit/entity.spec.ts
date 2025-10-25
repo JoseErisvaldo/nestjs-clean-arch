@@ -1,4 +1,4 @@
-import { Entity } from '../../../../../shared/domain/entity';
+import { Entity } from '../../entity';
 
 type StubProps = {
   prop1: string;
